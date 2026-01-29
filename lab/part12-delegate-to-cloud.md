@@ -101,4 +101,6 @@ After submitting, you'll see a confirmation that your task has been delegated. Y
 
 ---
 
-[Back: Part 11 - Reusable Prompt Files](./part11-reusable-prompts.md) | [Next: Setup](./setup.md)
+🎉 **Congratulations!** You've completed all 13 parts of the workshop!
+
+[Back: Part 11 - Reusable Prompt Files](./part11-reusable-prompts.md) | [🎊 Complete Workshop!](complete.html)
