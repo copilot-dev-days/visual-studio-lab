@@ -3,11 +3,8 @@ html[data-theme="light"] {
     --bg-card: #ffffff;
     --bg-code: #f0f0f5;
     --neon-cyan: #0077b6;
-    --neon-magenta: #7b1fa2;
+    --neon-magenta: #c2185b;
     --neon-purple: #7b1fa2;
-    --vs-purple: #68217a;
-    --vs-blue: #0078d4;
-    --neon-blue: #0077b6;
     --text-primary: #1a1a2e;
     --text-secondary: #555570;
     --border-color: #d0d0dd;
@@ -16,12 +13,12 @@ html[data-theme="light"] {
 }
 
 html[data-theme="light"] body::before {
-    background: linear-gradient(90deg, rgba(104,33,122,0.05) 1px, transparent 1px),
-                linear-gradient(rgba(104,33,122,0.05) 1px, transparent 1px);
+    background: linear-gradient(90deg, rgba(0,119,182,0.05) 1px, transparent 1px),
+                linear-gradient(rgba(0,119,182,0.05) 1px, transparent 1px);
 }
 
 html[data-theme="light"] .hero::before {
-    background: radial-gradient(ellipse at 50% 0%, rgba(104,33,122,0.15), transparent 70%);
+    background: radial-gradient(ellipse at 50% 0%, rgba(0,119,182,0.15), transparent 70%);
 }
 
 html[data-theme="light"] .header {
@@ -40,8 +37,8 @@ html[data-theme="light"] .btn-secondary {
 }
 
 html[data-theme="light"] .btn-secondary:hover {
-    background: rgba(104,33,122,0.1);
-    border-color: var(--vs-purple);
+    background: rgba(0,119,182,0.1);
+    border-color: var(--neon-cyan);
 }
 
 html[data-theme="light"] .card {
@@ -63,6 +60,6 @@ html[data-theme="light"] .card {
 }
 
 .theme-toggle:hover {
-    border-color: var(--neon-purple);
-    color: var(--neon-purple);
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
 }
