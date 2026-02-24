@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎉 Workshop Complete! | VS GitHub Copilot Lab</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="light-theme.css">
+    <script src="theme-toggle.js"></script>
     <style>
         :root {
             --bg-dark: #0a0a0f;
@@ -244,6 +245,9 @@
     </style>
 </head>
 <body>
+    <div style="position:fixed;top:1rem;right:1rem;z-index:1000;">
+        <button class="theme-toggle" onclick="toggleTheme()">☀️ Light</button>
+    </div>
     <div class="container">
         <div class="trophy">🏆</div>
         <h1>Workshop Complete!</h1>

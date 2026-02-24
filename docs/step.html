@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Studio GitHub Copilot Lab</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <style>
         :root {
             --bg-dark: #0a0a0f;
@@ -491,6 +491,8 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="light-theme.css">
+    <script src="theme-toggle.js"></script>
 </head>
 <body>
     <header class="header">
@@ -500,6 +502,7 @@
                 <span class="header-title">VS GitHub Copilot Lab</span>
             </a>
             <nav class="header-nav">
+                <button class="theme-toggle" onclick="toggleTheme()">☀️ Light</button>
                 <button class="nav-btn" id="prevBtn" disabled>← Previous</button>
                 <button class="nav-btn" id="nextBtn">Next →</button>
             </nav>
@@ -617,11 +620,15 @@
             // Convert GitHub-style checkboxes: 1. [] becomes checkbox
             md = md.replace(/^(\d+)\.\s*\[\s*\]\s*/gm, '$1. <input type="checkbox"> ');
             
-            // Handle GitHub-style alerts: > [!NOTE], > [!TIP], > [!IMPORTANT]
-            md = md.replace(/>\s*\[!NOTE\]\s*\n/gi, '> **📝 Note**\n>\n');
-            md = md.replace(/>\s*\[!TIP\]\s*\n/gi, '> **💡 Tip**\n>\n');
-            md = md.replace(/>\s*\[!IMPORTANT\]\s*\n/gi, '> **⚠️ Important**\n>\n');
-            md = md.replace(/>\s*\[!WARNING\]\s*\n/gi, '> **⚠️ Warning**\n>\n');
+            // Handle GitHub alerts: [!NOTE], [!TIP], [!IMPORTANT], [!WARNING], [!CAUTION]
+            md = md.replace(/> \[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*\n((?:> .*(?:\n|$))*)/gi, function(match, type, content) {
+                const cleanContent = content.replace(/^> ?/gm, '').trim();
+                const icons = { NOTE: 'ℹ️', TIP: '💡', IMPORTANT: '❗', WARNING: '⚠️', CAUTION: '🔴' };
+                const colors = { NOTE: 'var(--vs-blue)', TIP: 'var(--success-green)', IMPORTANT: 'var(--neon-purple)', WARNING: 'var(--warning-yellow)', CAUTION: '#ff6b6b' };
+                const icon = icons[type.toUpperCase()] || 'ℹ️';
+                const color = colors[type.toUpperCase()] || 'var(--vs-blue)';
+                return `<blockquote style="border-left-color: ${color};"><p style="color: ${color};">${icon} ${type.toUpperCase()}</p><p>${cleanContent}</p></blockquote>\n`;
+            });
 
             // Remove navigation links at the bottom (we have our own)
             md = md.replace(/---\s*\n\s*\[Back:.*$/s, '');
@@ -656,6 +663,11 @@
                 });
 
                 document.getElementById('markdown-content').innerHTML = marked.parse(md);
+
+                // Fire confetti on last step
+                if (idx === steps.length - 1 && typeof confetti === 'function') {
+                    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+                }
             } catch (error) {
                 document.getElementById('markdown-content').innerHTML = `
                     <h1>Error Loading Content</h1>
