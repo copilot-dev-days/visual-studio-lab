@@ -1,3 +1,5 @@
+🌐 [Português (Brasil)](README.pt_BR.md) | [Español](README.es.md)
+
 <p align="center">
 <img src="img/banner.jpg" alt="decorative banner" width="1200"/>
 </p>

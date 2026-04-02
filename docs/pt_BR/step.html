@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSC44NDPLQ"></script>
@@ -20,9 +20,9 @@
     <link rel="alternate" hreflang="pt-BR" href="https://copilot-dev-days.github.io/visual-studio-lab/pt_BR/">
     <link rel="alternate" hreflang="es" href="https://copilot-dev-days.github.io/visual-studio-lab/es/">
     <link rel="alternate" hreflang="x-default" href="https://copilot-dev-days.github.io/visual-studio-lab/">
-    <link rel="stylesheet" href="step.css">
-    <link rel="stylesheet" href="light-theme.css">
-    <script src="theme-toggle.js"></script>
+    <link rel="stylesheet" href="../step.css">
+    <link rel="stylesheet" href="../light-theme.css">
+    <script src="../theme-toggle.js"></script>
 </head>
 <body>
     <header class="header">
@@ -33,16 +33,16 @@
             </a>
             <nav class="header-nav">
                 <div class="locale-picker" id="localePicker">
-                    <button type="button" class="locale-toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">🌐</button>
+                    <button type="button" class="locale-toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Selecionar idioma">🌐</button>
                     <ul role="listbox" aria-label="Language">
-                        <li role="option" data-locale="en" aria-selected="true" class="active">🇬🇧 English</li>
+                        <li role="option" data-locale="en" aria-selected="false">🇬🇧 English</li>
                         <li role="option" data-locale="es" aria-selected="false">🇪🇸 Español</li>
-                        <li role="option" data-locale="pt-BR" aria-selected="false">🇧🇷 Português (Brasil)</li>
+                        <li role="option" data-locale="pt-BR" aria-selected="true" class="active">🇧🇷 Português (Brasil)</li>
                     </ul>
                 </div>
-                <button class="theme-toggle" onclick="toggleTheme()">☀️ Light</button>
-                <button class="nav-btn" id="prevBtn" disabled>← Previous</button>
-                <button class="nav-btn" id="nextBtn">Next →</button>
+                <button class="theme-toggle" onclick="toggleTheme()">☀️ Claro</button>
+                <button class="nav-btn" id="prevBtn" disabled>← Anterior</button>
+                <button class="nav-btn" id="nextBtn">Próximo →</button>
             </nav>
         </div>
     </header>
@@ -50,7 +50,7 @@
     <div class="layout">
         <aside class="sidebar">
             <div class="sidebar-section">
-                <div class="sidebar-title">Workshop Steps</div>
+                <div class="sidebar-title">Partes do Workshop</div>
                 <nav id="stepNav"></nav>
             </div>
         </aside>
@@ -58,11 +58,11 @@
         <main class="main">
             <article class="content">
                 <div id="markdown-content" class="markdown">
-                    <div class="loading">Loading content</div>
+                    <div class="loading">Carregando conteúdo</div>
                 </div>
                 <nav class="nav-footer">
-                    <a href="#" class="nav-footer-btn disabled" id="prevLink">← Previous</a>
-                    <a href="#" class="nav-footer-btn" id="nextLink">Next →</a>
+                    <a href="#" class="nav-footer-btn disabled" id="prevLink">← Anterior</a>
+                    <a href="#" class="nav-footer-btn" id="nextLink">Próximo →</a>
                 </nav>
             </article>
         </main>
@@ -71,20 +71,20 @@
     <script>
         // Define all steps in order
         const steps = [
-            { id: 'setup', file: 'setup.md', title: 'Setup & Configuration', number: '00' },
-            { id: 'part00-exploring-codebase', file: 'part00-exploring-codebase.md', title: 'Exploring the Codebase', number: '01' },
+            { id: 'setup', file: 'setup.md', title: 'Configuração & Setup', number: '00' },
+            { id: 'part00-exploring-codebase', file: 'part00-exploring-codebase.md', title: 'Explorando o Código', number: '01' },
             { id: 'part01-code-completion', file: 'part01-code-completion.md', title: 'Code Completion', number: '02' },
-            { id: 'part02-enhancing-ui', file: 'part02-enhancing-ui.md', title: 'Enhancing UI', number: '03' },
-            { id: 'part03-referencing-files', file: 'part03-referencing-files.md', title: 'Referencing Files', number: '04' },
-            { id: 'part04-custom-instructions', file: 'part04-custom-instructions.md', title: 'Custom Instructions', number: '05' },
+            { id: 'part02-enhancing-ui', file: 'part02-enhancing-ui.md', title: 'Aprimorando a UI', number: '03' },
+            { id: 'part03-referencing-files', file: 'part03-referencing-files.md', title: 'Referenciando Arquivos', number: '04' },
+            { id: 'part04-custom-instructions', file: 'part04-custom-instructions.md', title: 'Instruções Personalizadas', number: '05' },
             { id: 'part05-implementing-features', file: 'part05-implementing-features.md', title: 'Agent Mode', number: '06' },
             { id: 'part06-copilot-vision', file: 'part06-copilot-vision.md', title: 'Copilot Vision', number: '07' },
-            { id: 'part07-debugging-with-copilot', file: 'part07-debugging-with-copilot.md', title: 'Debugging', number: '08' },
-            { id: 'part08-commit-summary-descriptions', file: 'part08-commit-summary-descriptions.md', title: 'Commit Summaries', number: '09' },
+            { id: 'part07-debugging-with-copilot', file: 'part07-debugging-with-copilot.md', title: 'Depuração', number: '08' },
+            { id: 'part08-commit-summary-descriptions', file: 'part08-commit-summary-descriptions.md', title: 'Resumos de Commit', number: '09' },
             { id: 'part09-mcp', file: 'part09-mcp.md', title: 'MCP Servers', number: '10' },
-            { id: 'part10-planning-mode', file: 'part10-planning-mode.md', title: 'Planning Mode', number: '11' },
-            { id: 'part11-reusable-prompts', file: 'part11-reusable-prompts.md', title: 'Prompt Files', number: '12' },
-            { id: 'part12-delegate-to-cloud', file: 'part12-delegate-to-cloud.md', title: 'Cloud Delegation', number: '13' },
+            { id: 'part10-planning-mode', file: 'part10-planning-mode.md', title: 'Modo de Planejamento', number: '11' },
+            { id: 'part11-reusable-prompts', file: 'part11-reusable-prompts.md', title: 'Arquivos de Prompt', number: '12' },
+            { id: 'part12-delegate-to-cloud', file: 'part12-delegate-to-cloud.md', title: 'Delegação para Nuvem', number: '13' },
         ];
 
         // Get current step from URL
@@ -133,7 +133,7 @@
                 prevLink.classList.remove('disabled');
             } else {
                 prevLink.classList.add('disabled');
-                prevLink.textContent = '← Previous';
+                prevLink.textContent = '← Anterior';
             }
 
             if (idx < steps.length - 1) {
@@ -143,7 +143,7 @@
             } else {
                 // Last step - link to completion page
                 nextLink.href = 'complete.html';
-                nextLink.textContent = '🎉 Complete Workshop!';
+                nextLink.textContent = '🎉 Workshop Completo!';
                 nextLink.classList.remove('disabled');
                 nextLink.style.background = 'linear-gradient(135deg, var(--neon-cyan), var(--neon-purple))';
             }
@@ -179,7 +179,7 @@
         async function loadContent() {
             const idx = getCurrentStepIndex();
             if (idx === -1) {
-                document.getElementById('markdown-content').innerHTML = '<p>Step not found. <a href="?step=setup">Go to Setup</a></p>';
+                document.getElementById('markdown-content').innerHTML = '<p>Passo não encontrado. <a href="?step=setup">Ir para Configuração</a></p>';
                 return;
             }
 
@@ -187,9 +187,9 @@
             document.title = `${step.title} | VS GitHub Copilot Lab`;
 
             try {
-                // Fetch markdown from lab folder (copied to docs/lab during deploy)
-                const response = await fetch(`lab/${step.file}`);
-                if (!response.ok) throw new Error('Failed to load');
+                // Fetch markdown from lab/pt_BR folder
+                const response = await fetch(`lab/pt_BR/${step.file}`);
+                if (!response.ok) throw new Error('Falha ao carregar');
                 
                 let md = await response.text();
                 md = processMarkdown(md);
@@ -208,9 +208,9 @@
                 }
             } catch (error) {
                 document.getElementById('markdown-content').innerHTML = `
-                    <h1>Error Loading Content</h1>
-                    <p>Could not load ${step.file}. Please check that the file exists.</p>
-                    <p><a href="index.html">Return to home</a></p>
+                    <h1>Erro ao Carregar Conteúdo</h1>
+                    <p>Não foi possível carregar ${step.file}. Verifique se o arquivo existe.</p>
+                    <p><a href="index.html">Voltar ao início</a></p>
                 `;
             }
         }

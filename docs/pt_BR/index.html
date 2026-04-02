@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSC44NDPLQ"></script>
@@ -11,106 +11,106 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visual Studio GitHub Copilot Lab | .NET Edition</title>
+    <title>Visual Studio GitHub Copilot Lab | Edição .NET</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="alternate" hreflang="en" href="https://copilot-dev-days.github.io/visual-studio-lab/">
     <link rel="alternate" hreflang="pt-BR" href="https://copilot-dev-days.github.io/visual-studio-lab/pt_BR/">
     <link rel="alternate" hreflang="es" href="https://copilot-dev-days.github.io/visual-studio-lab/es/">
     <link rel="alternate" hreflang="x-default" href="https://copilot-dev-days.github.io/visual-studio-lab/">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="light-theme.css">
-    <script src="theme-toggle.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../light-theme.css">
+    <script src="../theme-toggle.js"></script>
 </head>
 <body>
     <div style="position:fixed;top:1rem;right:1rem;z-index:1000;display:flex;gap:0.5rem;align-items:center;">
         <div class="locale-picker" id="localePicker">
-            <button type="button" class="locale-toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">🌐</button>
+            <button type="button" class="locale-toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Selecionar idioma">🌐</button>
             <ul role="listbox" aria-label="Language">
-                <li role="option" data-locale="en" aria-selected="true" class="active">🇬🇧 English</li>
+                <li role="option" data-locale="en" aria-selected="false">🇬🇧 English</li>
                 <li role="option" data-locale="es" aria-selected="false">🇪🇸 Español</li>
-                <li role="option" data-locale="pt-BR" aria-selected="false">🇧🇷 Português (Brasil)</li>
+                <li role="option" data-locale="pt-BR" aria-selected="true" class="active">🇧🇷 Português (Brasil)</li>
             </ul>
         </div>
-        <button class="theme-toggle" onclick="toggleTheme()">☀️ Light</button>
+        <button class="theme-toggle" onclick="toggleTheme()">☀️ Claro</button>
     </div>
     <div class="container">
         <!-- Hero -->
         <section class="hero">
             <span class="hero-badge">🚀 .NET 10 + Blazor + Visual Studio 2026</span>
-            <h1>GitHub Copilot in Visual Studio</h1>
+            <h1>GitHub Copilot no Visual Studio</h1>
             <p class="hero-subtitle">
-                Build a TinyShop e-commerce app while mastering GitHub Copilot in Visual Studio 2026. 
-                Learn code completion, Agent mode, MCP servers, and AI-first development workflows.
+                Construa um aplicativo e-commerce TinyShop enquanto domina o GitHub Copilot no Visual Studio 2026. 
+                Aprenda code completion, Agent mode, MCP servers e fluxos de desenvolvimento com IA.
             </p>
             <div class="hero-cta">
                 <a href="step.html?step=setup" class="btn btn-primary">
-                    🚀 Start Workshop
+                    🚀 Iniciar Workshop
                 </a>
                 <a href="https://github.com/copilot-dev-days/visual-studio-lab" class="btn btn-secondary">
-                    📦 GitHub Repo
+                    📦 Repositório GitHub
                 </a>
             </div>
             <div class="stats">
                 <div class="stat">
                     <div class="stat-value">~2hr</div>
-                    <div class="stat-label">Duration</div>
+                    <div class="stat-label">Duração</div>
                 </div>
                 <div class="stat">
                     <div class="stat-value">13</div>
-                    <div class="stat-label">Parts</div>
+                    <div class="stat-label">Partes</div>
                 </div>
                 <div class="stat">
                     <div class="stat-value">2</div>
-                    <div class="stat-label">Projects</div>
+                    <div class="stat-label">Projetos</div>
                 </div>
             </div>
         </section>
 
         <!-- Features -->
         <section class="features">
-            <h2 class="section-title">What You'll Learn</h2>
+            <h2 class="section-title">O que Você Vai Aprender</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">✨</div>
                     <h3>Code Completion</h3>
-                    <p>Experience intelligent ghost text suggestions and Next Edit Suggestions (NES) as you type code in real-time.</p>
+                    <p>Experimente sugestões inteligentes de ghost text e Next Edit Suggestions (NES) enquanto você digita código em tempo real.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🤖</div>
                     <h3>Agent Mode</h3>
-                    <p>Let Copilot make multi-file changes, install packages, and implement complete features autonomously.</p>
+                    <p>Deixe o Copilot fazer alterações em múltiplos arquivos, instalar pacotes e implementar funcionalidades completas de forma autônoma.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔌</div>
                     <h3>MCP Servers</h3>
-                    <p>Extend Copilot's capabilities with Model Context Protocol servers for docs, GitHub, and more.</p>
+                    <p>Amplie as capacidades do Copilot com servidores Model Context Protocol para documentação, GitHub e muito mais.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">☁️</div>
                     <h3>Cloud Delegation</h3>
-                    <p>Offload complex tasks to the cloud while you focus on other work, then review the results.</p>
+                    <p>Delegue tarefas complexas para a nuvem enquanto você foca em outro trabalho, depois revise os resultados.</p>
                 </div>
             </div>
         </section>
 
         <!-- Workshop Parts -->
         <section class="workshop">
-            <h2 class="section-title">Workshop Parts</h2>
+            <h2 class="section-title">Partes do Workshop</h2>
             <div class="parts-list">
                 <a href="step.html?step=setup" class="part-card">
                     <div class="part-number">00</div>
                     <div class="part-content">
-                        <h3>Setup & Configuration</h3>
-                        <p>Clone the repo, install extensions, and configure GitHub Copilot settings</p>
+                        <h3>Configuração & Setup</h3>
+                        <p>Clone o repositório, instale extensões e configure o GitHub Copilot</p>
                     </div>
                     <span class="part-badge">Setup</span>
                 </a>
                 <a href="step.html?step=part00-exploring-codebase" class="part-card">
                     <div class="part-number">01</div>
                     <div class="part-content">
-                        <h3>Exploring the Codebase</h3>
-                        <p>Use Copilot Chat to understand the project structure and architecture</p>
+                        <h3>Explorando o Código</h3>
+                        <p>Use o Copilot Chat para entender a estrutura e arquitetura do projeto</p>
                     </div>
                     <span class="part-badge">Chat</span>
                 </a>
@@ -118,39 +118,39 @@
                     <div class="part-number">02</div>
                     <div class="part-content">
                         <h3>Code Completion & Ghost Text</h3>
-                        <p>Implement API endpoints with intelligent code suggestions and NES</p>
+                        <p>Implemente endpoints de API com sugestões inteligentes de código e NES</p>
                     </div>
                     <span class="part-badge">Completions</span>
                 </a>
                 <a href="step.html?step=part02-enhancing-ui" class="part-card">
                     <div class="part-number">03</div>
                     <div class="part-content">
-                        <h3>Enhancing UI with Inline Chat</h3>
-                        <p>Make targeted UI improvements using inline chat (Alt+/)</p>
+                        <h3>Aprimorando a UI com Inline Chat</h3>
+                        <p>Faça melhorias direcionadas na UI usando inline chat (Alt+/)</p>
                     </div>
                     <span class="part-badge">Inline</span>
                 </a>
                 <a href="step.html?step=part03-referencing-files" class="part-card">
                     <div class="part-number">04</div>
                     <div class="part-content">
-                        <h3>Referencing Code Files</h3>
-                        <p>Use # references to give Copilot context from specific files</p>
+                        <h3>Referenciando Arquivos de Código</h3>
+                        <p>Use referências # para dar ao Copilot contexto de arquivos específicos</p>
                     </div>
                     <span class="part-badge">Context</span>
                 </a>
                 <a href="step.html?step=part04-custom-instructions" class="part-card">
                     <div class="part-number">05</div>
                     <div class="part-content">
-                        <h3>Custom Instructions</h3>
-                        <p>Configure copilot-instructions.md to align suggestions with your standards</p>
+                        <h3>Instruções Personalizadas</h3>
+                        <p>Configure copilot-instructions.md para alinhar sugestões com seus padrões</p>
                     </div>
                     <span class="part-badge">Instructions</span>
                 </a>
                 <a href="step.html?step=part05-implementing-features" class="part-card">
                     <div class="part-number">06</div>
                     <div class="part-content">
-                        <h3>Implementing Features with Agent</h3>
-                        <p>Build complete features across multiple files using Agent mode</p>
+                        <h3>Implementando Funcionalidades com Agent</h3>
+                        <p>Construa funcionalidades completas em múltiplos arquivos usando o Agent mode</p>
                     </div>
                     <span class="part-badge">Agent</span>
                 </a>
@@ -158,23 +158,23 @@
                     <div class="part-number">07</div>
                     <div class="part-content">
                         <h3>Copilot Vision</h3>
-                        <p>Upload design mockups and let Copilot implement the UI</p>
+                        <p>Envie mockups de design e deixe o Copilot implementar a UI</p>
                     </div>
                     <span class="part-badge">Vision</span>
                 </a>
                 <a href="step.html?step=part07-debugging-with-copilot" class="part-card">
                     <div class="part-number">08</div>
                     <div class="part-content">
-                        <h3>Debugging with Copilot</h3>
-                        <p>Analyze exceptions, inspect variables, and generate debug expressions</p>
+                        <h3>Depuração com Copilot</h3>
+                        <p>Analise exceções, inspecione variáveis e gere expressões de depuração</p>
                     </div>
                     <span class="part-badge">Debug</span>
                 </a>
                 <a href="step.html?step=part08-commit-summary-descriptions" class="part-card">
                     <div class="part-number">09</div>
                     <div class="part-content">
-                        <h3>Commit Summaries & Code Review</h3>
-                        <p>Generate meaningful commit messages and review code quality</p>
+                        <h3>Resumos de Commit & Code Review</h3>
+                        <p>Gere mensagens de commit significativas e revise a qualidade do código</p>
                     </div>
                     <span class="part-badge">Git</span>
                 </a>
@@ -182,31 +182,31 @@
                     <div class="part-number">10</div>
                     <div class="part-content">
                         <h3>MCP Servers</h3>
-                        <p>Connect to GitHub, Microsoft Learn, and other external services</p>
+                        <p>Conecte-se ao GitHub, Microsoft Learn e outros serviços externos</p>
                     </div>
                     <span class="part-badge">MCP</span>
                 </a>
                 <a href="step.html?step=part10-planning-mode" class="part-card">
                     <div class="part-number">11</div>
                     <div class="part-content">
-                        <h3>Planning Mode</h3>
-                        <p>Create structured implementation plans before generating code</p>
+                        <h3>Modo de Planejamento</h3>
+                        <p>Crie planos de implementação estruturados antes de gerar código</p>
                     </div>
                     <span class="part-badge">Planning</span>
                 </a>
                 <a href="step.html?step=part11-reusable-prompts" class="part-card">
                     <div class="part-number">12</div>
                     <div class="part-content">
-                        <h3>Reusable Prompt Files</h3>
-                        <p>Create standardized prompts for unit testing and common tasks</p>
+                        <h3>Arquivos de Prompt Reutilizáveis</h3>
+                        <p>Crie prompts padronizados para testes unitários e tarefas comuns</p>
                     </div>
                     <span class="part-badge">Prompts</span>
                 </a>
                 <a href="step.html?step=part12-delegate-to-cloud" class="part-card">
                     <div class="part-number">13</div>
                     <div class="part-content">
-                        <h3>Delegate to the Cloud</h3>
-                        <p>Offload complex tasks to cloud agents and review pull requests</p>
+                        <h3>Delegar para a Nuvem</h3>
+                        <p>Delegue tarefas complexas para agentes na nuvem e revise pull requests</p>
                     </div>
                     <span class="part-badge">Cloud</span>
                 </a>
@@ -215,37 +215,37 @@
 
         <!-- Key Concepts -->
         <section class="concepts">
-            <h2 class="section-title">Key Concepts & Documentation</h2>
+            <h2 class="section-title">Conceitos-chave & Documentação</h2>
             <div class="concepts-grid">
                 <div class="concept-card">
-                    <h4>💬 Copilot Chat Modes</h4>
-                    <p>Switch between Ask, Edit, and Agent modes for different workflows—from quick questions to multi-file changes.</p>
-                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-chat-context" target="_blank">Learn more →</a>
+                    <h4>💬 Modos do Copilot Chat</h4>
+                    <p>Alterne entre os modos Ask, Edit e Agent para diferentes fluxos de trabalho — de perguntas rápidas a alterações em múltiplos arquivos.</p>
+                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-chat-context" target="_blank">Saiba mais →</a>
                 </div>
                 <div class="concept-card">
-                    <h4>📝 Custom Instructions</h4>
-                    <p>Use copilot-instructions.md to provide project-wide context about your codebase, standards, and preferences.</p>
-                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-customize-copilot" target="_blank">Learn more →</a>
+                    <h4>📝 Instruções Personalizadas</h4>
+                    <p>Use copilot-instructions.md para fornecer contexto do projeto sobre seu código, padrões e preferências.</p>
+                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-customize-copilot" target="_blank">Saiba mais →</a>
                 </div>
                 <div class="concept-card">
                     <h4>🔌 Model Context Protocol</h4>
-                    <p>MCP servers extend Copilot's capabilities by connecting to external tools, documentation, and services.</p>
-                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-mcp-overview" target="_blank">Learn more →</a>
+                    <p>Servidores MCP ampliam as capacidades do Copilot conectando-se a ferramentas externas, documentação e serviços.</p>
+                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-mcp-overview" target="_blank">Saiba mais →</a>
                 </div>
                 <div class="concept-card">
-                    <h4>📋 Prompt Files</h4>
-                    <p>Create reusable, standardized prompts in .github/prompts to share best practices across your team.</p>
-                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-prompts-files" target="_blank">Learn more →</a>
+                    <h4>📋 Arquivos de Prompt</h4>
+                    <p>Crie prompts reutilizáveis e padronizados em .github/prompts para compartilhar boas práticas com sua equipe.</p>
+                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-prompts-files" target="_blank">Saiba mais →</a>
                 </div>
                 <div class="concept-card">
                     <h4>☁️ Copilot Coding Agent</h4>
-                    <p>Delegate tasks to cloud-based agents that can create PRs while you focus on other work.</p>
-                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-agent-mode" target="_blank">Learn more →</a>
+                    <p>Delegue tarefas para agentes na nuvem que podem criar PRs enquanto você foca em outro trabalho.</p>
+                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-agent-mode" target="_blank">Saiba mais →</a>
                 </div>
                 <div class="concept-card">
                     <h4>👁️ Copilot Vision</h4>
-                    <p>Upload images of UI designs, errors, or diagrams and let Copilot help implement or debug them.</p>
-                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-vision" target="_blank">Learn more →</a>
+                    <p>Envie imagens de designs de UI, erros ou diagramas e deixe o Copilot ajudar a implementar ou depurar.</p>
+                    <a href="https://learn.microsoft.com/visualstudio/ide/copilot-vision" target="_blank">Saiba mais →</a>
                 </div>
             </div>
         </section>
@@ -254,7 +254,7 @@
     <!-- Prerequisites -->
     <section class="prereqs">
         <div class="container">
-            <h2 class="section-title">Prerequisites</h2>
+            <h2 class="section-title">Pré-requisitos</h2>
             <div class="prereqs-grid">
                 <div class="prereq-item">
                     <span class="prereq-check">✓</span>
@@ -270,7 +270,7 @@
                 </div>
                 <div class="prereq-item">
                     <span class="prereq-check">✓</span>
-                    <span>Git installed</span>
+                    <span>Git instalado</span>
                 </div>
             </div>
         </div>
@@ -279,19 +279,19 @@
     <div class="container">
         <!-- Resources -->
         <section class="resources">
-            <h2 class="section-title">Additional Resources</h2>
+            <h2 class="section-title">Recursos Adicionais</h2>
             <div class="resources-grid">
                 <a href="https://learn.microsoft.com/visualstudio/ide/visual-studio-github-copilot-extension" class="resource-card" target="_blank">
-                    <h4>📚 Copilot Extension Docs</h4>
-                    <p>Official documentation for GitHub Copilot in Visual Studio</p>
+                    <h4>📚 Docs da Extensão Copilot</h4>
+                    <p>Documentação oficial do GitHub Copilot no Visual Studio</p>
                 </a>
                 <a href="https://learn.microsoft.com/visualstudio/ide/ai-assisted-development-visual-studio" class="resource-card" target="_blank">
-                    <h4>🧠 AI-Assisted Development</h4>
-                    <p>Overview of AI features in Visual Studio 2026</p>
+                    <h4>🧠 Desenvolvimento Assistido por IA</h4>
+                    <p>Visão geral dos recursos de IA no Visual Studio 2026</p>
                 </a>
                 <a href="https://github.com/github/copilot-docs" class="resource-card" target="_blank">
-                    <h4>📖 GitHub Copilot Docs</h4>
-                    <p>Comprehensive documentation from GitHub</p>
+                    <h4>📖 Docs do GitHub Copilot</h4>
+                    <p>Documentação completa do GitHub</p>
                 </a>
             </div>
         </section>
@@ -299,13 +299,13 @@
         <!-- Footer -->
         <footer>
             <div class="footer-links">
-                <a href="https://github.com/copilot-dev-days/visual-studio-lab">GitHub Repository</a>
+                <a href="https://github.com/copilot-dev-days/visual-studio-lab">Repositório GitHub</a>
                 <a href="https://learn.microsoft.com/visualstudio/">Visual Studio Docs</a>
                 <a href="https://github.com/features/copilot">GitHub Copilot</a>
                 <a href="https://dotnet.microsoft.com/">.NET</a>
             </div>
             <p class="footer-credit">
-                Built with 💜 by the Visual Studio & .NET Teams
+                Feito com 💜 pelos times do Visual Studio & .NET
             </p>
         </footer>
     </div>
