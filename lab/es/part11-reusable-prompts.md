@@ -1,19 +1,18 @@
 <!-- l10n-sync: source-file="part11-reusable-prompts.md" -->
-# Parte 11: Prompt Files reutilizables
 
-Los Prompt Files son una forma poderosa de crear prompts estandarizados y reutilizables que se pueden compartir con tu equipo. Ayudan a garantizar la consistencia en cómo interactúas con GitHub Copilot y pueden codificar las mejores prácticas para tareas comunes como generación de código, pruebas y documentación.
+Los archivos de prompt son una forma poderosa de crear prompts estandarizados y reutilizables que se pueden compartir con tu equipo. Ayudan a garantizar la consistencia en cómo interactúas con GitHub Copilot y pueden codificar las mejores prácticas para tareas comunes como generación de código, pruebas y documentación.
 
-En esta parte, crearás un Prompt File reutilizable para generar pruebas unitarias y lo usarás para agregar pruebas al proyecto existente TinyShop.Tests.
+En esta parte, crearás un archivo de prompt reutilizable para generar pruebas unitarias y lo usarás para agregar pruebas al proyecto existente TinyShop.Tests.
 
-## Entendiendo los Prompt Files
+## Entendiendo los Archivos de Prompt
 
-Los Prompt Files son archivos markdown almacenados en la carpeta `.github/prompts` de tu repositorio. Estos:
+Los archivos de prompt son archivos markdown almacenados en la carpeta `.github/prompts` de tu repositorio. Estos:
 - Pueden ser invocados por nombre en Copilot Chat
 - Se comparten con todo tu equipo a través del control de código fuente
 - Pueden incluir marcadores de posición para contenido dinámico
 - Ayudan a estandarizar tareas comunes de desarrollo
 
-## Explorando el proyecto de pruebas
+## Explorando el Proyecto de Pruebas
 
 La solución ya incluye un proyecto **TinyShop.Tests** con MSTest configurado. Echemos un vistazo a lo que hay.
 
@@ -21,9 +20,9 @@ La solución ya incluye un proyecto **TinyShop.Tests** con MSTest configurado. E
 1. [] Abre **ProductTests.cs** para ver la prueba de referencia existente.
 1. [] Observa que la prueba sigue el patrón Arrange-Act-Assert y verifica los valores predeterminados para una nueva instancia de Product.
 
-## Creando un Prompt File para pruebas unitarias
+## Creando un Archivo de Prompt para Pruebas Unitarias
 
-Ahora creemos un Prompt File que ayude a generar pruebas unitarias adicionales usando MSTest.
+Ahora creemos un archivo de prompt que ayude a generar pruebas unitarias adicionales usando MSTest.
 
 1. [] En el **Solution Explorer** veremos el nodo **GitHub** de la extensión para agregarlo fácilmente:
    - Haz clic derecho en el icono/extensión del nodo **GitHub** en Visual Studio.
@@ -34,7 +33,7 @@ Ahora creemos un Prompt File que ayude a generar pruebas unitarias adicionales u
 
 1. [] Si puedes crear el archivo manualmente en el explorador de archivos, agrega un nuevo archivo llamado `unit-test.prompt.md` en `.github/prompts` y pega el contenido a continuación.
 
-1. [] Actualiza el Prompt File con el siguiente contenido:
+1. [] Actualiza el archivo de prompt con el siguiente contenido:
 
    ```markdown
    ---
@@ -69,15 +68,15 @@ Ahora creemos un Prompt File que ayude a generar pruebas unitarias adicionales u
 
 1. [] Guarda el archivo.
 
-## Usando el prompt reutilizable
+## Usando el Prompt Reutilizable
 
-Ahora usemos nuestro nuevo Prompt File para generar pruebas unitarias adicionales para la clase Product.
+Ahora usemos nuestro nuevo archivo de prompt para generar pruebas unitarias adicionales para la clase Product.
 
-1. [] En Copilot Chat, escribe `/` para ver los Prompt Files disponibles.
+1. [] En Copilot Chat, escribe `/` para ver los archivos de prompt disponibles.
 1. [] Selecciona `unit-test` de la lista de prompts disponibles.
 1. [] Cuando se te solicite la entrada, escribe: `the Product class in DataEntities, including tests for setting and getting each property, and tests using DataRow for multiple values`
 
-   ![Using a prompt file](./images/11-prompt-file.png)
+   ![Usando un archivo de prompt](./images/11-prompt-file.png)
 
 1. [] Revisa las pruebas generadas. Deberían incluir:
    - Pruebas para cada propiedad (Name, Description, Price, ImageUrl)
@@ -85,7 +84,7 @@ Ahora usemos nuestro nuevo Prompt File para generar pruebas unitarias adicionale
    - Nombres de métodos de prueba apropiados siguiendo el patrón
    - Comentarios explicando el propósito de las pruebas
 
-## Ejemplo de pruebas generadas
+## Ejemplo de Pruebas Generadas
 
 Las pruebas generadas deberían verse similares a:
 
@@ -138,15 +137,15 @@ public void ImageUrl_SetValue_ReturnsExpectedValue(string imageUrl)
 }
 ```
 
-## Ejecutando las pruebas
+## Ejecutando las Pruebas
 
 1. [] Abre el **Test Explorer** desde **Test -> Test Explorer**.
 1. [] Compila la solución para descubrir las pruebas.
 1. [] Haz clic en **Run All** para ejecutar todas las pruebas incluyendo las nuevas pruebas generadas.
 1. [] Verifica que todas las pruebas pasen.
 
-**Punto clave**: Los Prompt Files reutilizables ayudan a estandarizar cómo tu equipo usa GitHub Copilot. Al crear prompts para tareas comunes como pruebas unitarias, aseguras consistencia y codificas las mejores prácticas de las que todo el equipo puede beneficiarse.
+**Punto clave**: Los archivos de prompt reutilizables ayudan a estandarizar cómo tu equipo usa GitHub Copilot. Al crear prompts para tareas comunes como pruebas unitarias, aseguras consistencia y codificas las mejores prácticas de las que todo el equipo puede beneficiarse.
 
 ---
 
-[Atrás: Parte 10 - Planning Mode en Agent](./part10-planning-mode.md) ← | [Siguiente: Parte 12 - Delegar a la nube](./part12-delegate-to-cloud.md) →
+[Atrás: Parte 10 - Planning Mode en Agent](./part10-planning-mode.md) ← | [Siguiente: Parte 12 - Delegar a la Nube](./part12-delegate-to-cloud.md) →

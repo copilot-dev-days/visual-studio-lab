@@ -1,13 +1,12 @@
 <!-- l10n-sync: source-file="part11-reusable-prompts.md" -->
-# Parte 11: Prompt Files Reutilizáveis
 
-Prompt Files são uma forma poderosa de criar prompts padronizados e reutilizáveis que podem ser compartilhados com sua equipe. Eles ajudam a garantir consistência na forma como você interage com o GitHub Copilot e podem codificar boas práticas para tarefas comuns como geração de código, testes e documentação.
+Os arquivos de prompt são uma forma poderosa de criar prompts padronizados e reutilizáveis que podem ser compartilhados com sua equipe. Eles ajudam a garantir consistência na forma como você interage com o GitHub Copilot e podem codificar boas práticas para tarefas comuns como geração de código, testes e documentação.
 
-Nesta parte, você criará um Prompt File reutilizável para gerar testes unitários e o usará para adicionar testes ao projeto TinyShop.Tests existente.
+Nesta parte, você criará um arquivo de prompt reutilizável para gerar testes unitários e o usará para adicionar testes ao projeto TinyShop.Tests existente.
 
-## Entendendo os Prompt Files
+## Entendendo os Arquivos de Prompt
 
-Prompt Files são arquivos markdown armazenados na pasta `.github/prompts` do seu repositório. Eles:
+Os arquivos de prompt são arquivos markdown armazenados na pasta `.github/prompts` do seu repositório. Eles:
 - Podem ser invocados por nome no Copilot Chat
 - São compartilhados com toda a sua equipe através do controle de versão
 - Podem incluir placeholders para conteúdo dinâmico
@@ -21,9 +20,9 @@ A solução já inclui um projeto **TinyShop.Tests** com MSTest configurado. Vam
 1. [] Abra **ProductTests.cs** para ver o teste de referência existente.
 1. [] Observe que o teste segue o padrão Arrange-Act-Assert e verifica valores padrão para uma nova instância de Product.
 
-## Criando um Prompt File de Teste Unitário
+## Criando um Arquivo de Prompt para Testes Unitários
 
-Agora vamos criar um Prompt File que ajuda a gerar testes unitários adicionais usando MSTest.
+Agora vamos criar um arquivo de prompt que ajuda a gerar testes unitários adicionais usando MSTest.
 
 1. [] No **Solution Explorer** veremos o nó **GitHub** da extensão para adicioná-lo facilmente:
    - Clique com o botão direito no ícone/extensão do nó **GitHub** no Visual Studio.
@@ -34,7 +33,7 @@ Agora vamos criar um Prompt File que ajuda a gerar testes unitários adicionais 
 
 1. [] Se você puder criar o arquivo manualmente no explorador de arquivos, adicione um novo arquivo chamado `unit-test.prompt.md` em `.github/prompts` e cole o conteúdo abaixo.
 
-1. [] Atualize o Prompt File com o seguinte conteúdo:
+1. [] Atualize o arquivo de prompt com o seguinte conteúdo:
 
    ```markdown
    ---
@@ -71,13 +70,13 @@ Agora vamos criar um Prompt File que ajuda a gerar testes unitários adicionais 
 
 ## Usando o Prompt Reutilizável
 
-Agora vamos usar nosso novo Prompt File para gerar testes unitários adicionais para a classe Product.
+Agora vamos usar nosso novo arquivo de prompt para gerar testes unitários adicionais para a classe Product.
 
-1. [] No Copilot Chat, digite `/` para ver os Prompt Files disponíveis.
+1. [] No Copilot Chat, digite `/` para ver os arquivos de prompt disponíveis.
 1. [] Selecione `unit-test` da lista de prompts disponíveis.
 1. [] Quando solicitado para entrada, digite: `the Product class in DataEntities, including tests for setting and getting each property, and tests using DataRow for multiple values`
 
-   ![Using a prompt file](./images/11-prompt-file.png)
+   ![Usando um arquivo de prompt](./images/11-prompt-file.png)
 
 1. [] Revise os testes gerados. Eles devem incluir:
    - Testes para cada propriedade (Name, Description, Price, ImageUrl)
@@ -145,7 +144,7 @@ public void ImageUrl_SetValue_ReturnsExpectedValue(string imageUrl)
 1. [] Clique em **Run All** para executar todos os testes, incluindo os novos testes gerados.
 1. [] Verifique se todos os testes passam.
 
-**Ponto-chave**: Prompt Files reutilizáveis ajudam a padronizar como sua equipe usa o GitHub Copilot. Ao criar prompts para tarefas comuns como testes unitários, você garante consistência e codifica boas práticas das quais todos na equipe podem se beneficiar.
+**Ponto-chave**: Os arquivos de prompt reutilizáveis ajudam a padronizar como sua equipe usa o GitHub Copilot. Ao criar prompts para tarefas comuns como testes unitários, você garante consistência e codifica boas práticas das quais todos na equipe podem se beneficiar.
 
 ---
 
